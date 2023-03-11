@@ -9,6 +9,7 @@ import SignUp from './components/Auth/SignUp/SignUp'
 import SignIn from './components/Auth/SignIn/SignIn'
 import SignOut from './components/Auth/SignOut/SignOut'
 import ChangePassword from './components/Auth/ChangePassword/ChangePassword'
+import Boardwalk from './components/Cards/Property/Blue/Boardwalk'
 
 class App extends Component {
   constructor () {
@@ -89,6 +90,11 @@ class App extends Component {
             render={() => (
               <ChangePassword msgAlert={this.msgAlert} user={user} />
             )}
+          />
+          <AuthenticatedRoute
+            user={user}
+            path="/game"
+            render={() => <Boardwalk msgAlert={this.msgAlert} user={user} />}
           />
         </main>
       </Fragment>
